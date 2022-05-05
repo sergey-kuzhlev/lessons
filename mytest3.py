@@ -7,7 +7,7 @@ def ConquestCampaign(N: int, M: int, L: int, battalion: List[int]) -> int:
 
     delet = []
     day = 1
-    am = 0
+
     for i in range(0, len(battalion), 2):
         for j in range(i + 2, len(battalion), 2):
             if battalion[i] == battalion[j] and battalion[i + 1] == battalion[j + 1]:
@@ -21,7 +21,7 @@ def ConquestCampaign(N: int, M: int, L: int, battalion: List[int]) -> int:
         return 1
 
     while M * N * 2 != len(battalion):
-        for i in range(am, len(battalion), 2):
+        for i in range(0, len(battalion), 2):
             if battalion[i] == 1 and battalion[i+1] == 1:
                 battalion.append(1)
                 battalion.append(2)
@@ -92,8 +92,5 @@ def ConquestCampaign(N: int, M: int, L: int, battalion: List[int]) -> int:
             battalion[d + 1] = 0
         while 0 in battalion:
             battalion.remove(0)
-
         day += 1
-        am = L * 2
-        L = len(battalion)
     return day
