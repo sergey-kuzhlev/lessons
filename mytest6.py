@@ -1,7 +1,7 @@
 from typing import List
 
 def PatternUnlock(N: int, hits: List[int]) -> str:
-    """returns the second array sorted by the first array"""
+    
     result = 0
     k = 1
     for i in range(N-1):
