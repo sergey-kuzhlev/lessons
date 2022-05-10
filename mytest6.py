@@ -1,7 +1,6 @@
 from typing import List
 
 def PatternUnlock(N: int, hits: List[int]) -> str:
-    
     result = 0
     k = 1
     for i in range(N-1):
@@ -51,7 +50,6 @@ def PatternUnlock(N: int, hits: List[int]) -> str:
             else:
                 result += 1
     result = round(result, 5)
-    print(result)
     result *= 100000
     res = 0
     while result > 0:
